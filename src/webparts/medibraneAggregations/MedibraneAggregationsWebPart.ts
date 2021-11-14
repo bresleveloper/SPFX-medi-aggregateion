@@ -355,19 +355,22 @@ let getWeek = (d) =>{
         }
         if(status == 'not finished' &&item['Order_x0020_status'] != 'ended'&&item['Order_x0020_status'] != 'sent to customer' &&item['Order_x0020_Amount']!=null){
 
-          returnVal+=item['Order_x0020_Amount']
+          //let ordersCountFieldName = 'Order_x0020_Amount'
+          let ordersCountFieldName = 'lefttopay'
+
+          returnVal+=item[ordersCountFieldName]
           switch(item['Activity_x0020_type']){
             case 'Prototyping':
-              countByActivityTypes[0]+=item['Order_x0020_Amount'];
+              countByActivityTypes[0]+=item[ordersCountFieldName];
               break;
             case 'Mprep':
-              countByActivityTypes[1]+=item['Order_x0020_Amount'];
+              countByActivityTypes[1]+=item[ordersCountFieldName];
               break;
             case 'Clinical Builds':
-              countByActivityTypes[2]+=item['Order_x0020_Amount'];
+              countByActivityTypes[2]+=item[ordersCountFieldName];
               break;
             case 'Manufacturing':
-              countByActivityTypes[3]+=item['Order_x0020_Amount'];
+              countByActivityTypes[3]+=item[ordersCountFieldName];
               break;
           }
         }

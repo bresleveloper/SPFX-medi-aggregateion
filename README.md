@@ -43,3 +43,6 @@ gulp build; gulp bundle --ship; gulp package-solution --ship
 
 * npm ls -g --depth=0 @microsoft/generator-sharepoint
 * node -v; gulp -v;
+
+### new content for `gulpfile.js`
+https://sharepoint.stackexchange.com/questions/297905/spfx-task-never-defined-serve-after-upgrade-to-gulp-4

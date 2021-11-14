@@ -37,3 +37,9 @@ https://{tenant}/sites/{subsite}/_layouts/15/workbench.aspx
 
 
 gulp build; gulp bundle --ship; gulp package-solution --ship
+
+
+# some debug
+
+* npm ls -g --depth=0 @microsoft/generator-sharepoint
+* node -v; gulp -v;
